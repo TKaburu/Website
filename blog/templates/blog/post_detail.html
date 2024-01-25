@@ -1,0 +1,21 @@
+{% extends 'blog/index.html' %}
+{% load static %}
+
+{% block head %}
+    <link rel="stylesheet" href="{% static 'styles/post_detail.css' %}">
+{% endblock%}
+{% block content %}
+
+<div class="container">
+    <div class="article-container">
+        <article>
+            <h1>{{ post.title }}</h1>
+            <p class="post-details">
+                 <small>By: <strong>{{ post.author }}</strong> on {{ post.created_on }}</small><br>
+            </p>
+             <p class="body">{{ post.body }}</p> 
+        </article>
+    </div>
+</div>
+
+{% endblock %}

@@ -1,0 +1,10 @@
+.article-container {
+    border-bottom: 25px;
+    margin: auto;
+    /* padding: 65px; */
+}
+
+h1, .post-details{
+    text-align: center;
+}
+

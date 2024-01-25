@@ -1,0 +1,161 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display&family=Poppins&display=swap');
+
+:root {
+    --light : #f8f9fa;
+    --secondary: #adb5bd;
+    --dark: #343a40;
+    --primary-color: #f15bb5;
+    --secondary-color: #2ec4b6;
+    --border : #e9ecef;
+    --secondbg : #tu
+}
+
+* > * {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    padding: 0;
+    margin: 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+/* global styling */
+.text-light {
+    color: var(--light);
+}
+
+.text-secondary {
+    color: var(--secondary);
+}
+
+.text-dark {
+    color: var(--dark);
+}
+
+.text-primary {
+    color: var(--primary-color);
+}
+
+.bg-light {
+    background-color: var(--light);
+}
+
+.nav-container {
+    max-width: 1200px;
+    padding: 0 15px;
+    margin: auto;
+}
+.container {
+    max-width: 1200px;
+    /* padding: 0 15px; */
+    margin: auto;
+    max-height: 10%;
+    border-bottom: 30px;
+    padding: 65px;
+}
+/* .article-container {
+    border-bottom: 25px;
+    margin: auto;
+    padding: 65px;
+} */
+
+/* section styling */
+ 
+/* ------- Navigation Menu ---------- */
+.navbar {
+    position: sticky;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 10px;
+
+}
+
+.logo {
+    align-self: center;
+    font-family: 'Poppins', sans-serif;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.top-nav-link {
+    font-size: 18px;
+    margin: 12px;
+    color: var(--dark);
+    font-family: 'Poppins', sans-serif;
+}
+
+.search-icon {
+    border-right: 1px solid var(--secondary);
+    display: inline;
+    margin-right: 10px;
+    padding-right: 12px;
+}
+
+.toggle-button {
+    font-size: 21px;
+    background-color: transparent;
+    border: none;
+    position: absolute;
+    right: 0;
+    margin: 8px 10px;
+    display: none;
+}
+
+.toggle-button:focus {
+    outline: none;
+}
+
+.copyright {
+    background-color: var(--light);
+    /* bottom: 0; */
+    border-top: 20px;
+    display: flex;
+    justify-content: center;
+    padding: 10px 0;
+    /* position: static; */
+    text-align: center;
+    width: 100%;
+}
+
+
+
+
+/* media quaries */
+
+@media (max-width : 992px) {
+    .navbar {
+        flex-direction: column;
+        text-align: center;
+    }
+}
+
+@media (max-width : 574px) {
+    .toggle-button {
+        display: initial;
+    }
+
+    .collapse {
+        max-height: 0;
+        overflow: hidden;
+        transition: all 0.8s cubic-bezier(0.51,-0.15, 0, 0.98);
+    }
+
+    .collapse .top-nav-link {
+        display: block;
+        text-align: center;
+    }
+
+    .search-icon {
+        border-right: none;
+    }
+
+    .collapse-toggle {
+        max-height: 500px;
+    }
+}
